@@ -20,16 +20,19 @@ export default function Navbar() {
         <div className="navbar-menu" id="open-navbar1">
           <ul className="navbar-nav">
             <li className="active">
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="#">Contract</a>
             </li>
             <li>
-              <a href="#">Contact</a>
-            </li>
-            <li>
-              <a href="#">Signin</a>
+              <a
+                className="main-menu dontTouch"
+                href="#"
+                style={{ marginTop: '-5px' }}
+              >
+                Wallet
+              </a>
             </li>
           </ul>
         </div>

@@ -12,7 +12,6 @@ function App() {
         <div className="rocks_2"></div>
         <div className="rails"></div>
         <div className="train"></div>
-        <div className="ground"></div>
         <div className="lights"></div>
         <div className="moon"></div>
       </div>

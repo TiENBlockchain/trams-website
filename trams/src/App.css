@@ -11,7 +11,9 @@ body {
   overflow-x: hidden !important;
   position: relative;
   bottom: 0px;
+  background-color: #280744;
 }
+
 div {
   margin: 0 !important;
   padding: 0 !important;
@@ -22,7 +24,7 @@ div {
   background-color: #60b8ff;
 }
 .wrapper {
-  height: 100vh;
+  height: 85vh;
   width: 100vw;
   margin: auto;
   background: #60b8ff;
@@ -36,6 +38,13 @@ div {
   background-position: top center;
   background-size: contain;
 }
+
+@media (max-width: 768px) {
+  .background {
+    height: 500px;
+  }
+}
+
 .rocks_1 {
   position: absolute;
   bottom: -5px;
@@ -93,7 +102,7 @@ div {
 }
 .moon {
   position: absolute;
-  top: 60%;
+  top: 80%;
   height: 315px;
   left: 200px;
   width: 120px;
@@ -102,6 +111,13 @@ div {
   background-position: top center;
   background-size: contain;
 }
+
+@media only screen and (max-width: 600px) {
+  .moon {
+    top: 90%;
+  }
+}
+
 @keyframes translateX {
   0% {
     background-position: 0px 0px;
@@ -309,15 +325,14 @@ a {
   justify-content: center;
 }
 
-.headline h3 {
-  background-color: #7930a2;
-  color: #ffffff;
+.headline .station h2 {
+  color: #7930a2;
   padding: 15px 25px;
 }
 
 .break {
   flex-basis: 100%;
-  height: 50px;
+  height: 30px;
 }
 
 .stop-game .score-container {
@@ -326,7 +341,19 @@ a {
   height: 386px;
   border-radius: 50px;
   text-align: center;
+  margin-bottom: 30px !important;
 }
+
+@media only screen and (max-width: 600px) {
+  .stop-game .score-container {
+    width: 90vw;
+    height: 386px;
+    border-radius: 50px;
+    text-align: center;
+    margin-bottom: 70px !important;
+  }
+}
+
 .stop-game .score-container h1 {
   color: #fff;
   text-transform: uppercase;
@@ -374,7 +401,8 @@ a {
   right: 2px;
   position: relative;
 }
-.stop-game .score-container .play-again {
+.stop-game .score-container .play-again,
+.play-again {
   background-color: #ff4571;
   border: 2px solid #fff;
   color: #fff;
@@ -388,10 +416,12 @@ a {
   margin: 6px 4px;
   display: inline-block;
 }
-.stop-game .score-container .play-again:hover {
+.stop-game .score-container .play-again:hover,
+.play-again:hover {
   background-color: #ff5f84;
 }
-.stop-game .score-container .main-menu {
+.stop-game .score-container .main-menu,
+.main-menu {
   background-color: #44bfa3;
   border: 2px solid #fff;
   color: #fff;
@@ -405,9 +435,89 @@ a {
   margin: 6px 4px;
   display: inline-block;
 }
-.stop-game .score-container .main-menu:hover {
+.stop-game .score-container .main-menu:hover,
+.main-menu:hover {
   background-color: #57c6ac;
 }
 
-.card {
+.headline h1 {
+  color: #ffffff;
+  margin: 20px;
+}
+
+.pool-card {
+  padding: 20px 10px !important;
+  height: 350px;
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  margin: 10px !important;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+  border: 2px solid #fff;
+}
+
+.station {
+  text-align: center;
+}
+
+.logoColor {
+  color: #50b0c8 !important;
+}
+
+.treat-button {
+  font-family: 'Fascinate Inline', cursive;
+  font-size: 15px;
+  appearance: none;
+  background: linear-gradient(to bottom, #ff4571, #ff5f84);
+  border: none;
+  color: #fff;
+  border-radius: 2em;
+  padding: 0.6em 1.5em;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 0 0 1em rgba(white, 0.2);
+  transition: transform 0.1s cubic-bezier(0.5, 0, 0.5, 1), box-shadow 0.2s;
+  margin: 20px auto auto auto;
+  outline: none;
+  cursor: not-allowed;
+}
+
+treat-button:hover {
+  box-shadow: 0 0 2em rgba(white, 0.3);
+}
+
+treat-button active {
+  transform: scale(0.8) translateY(10%);
+  transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.long-card {
+  background-color: #ffffff;
+  width: 60vw;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 20px !important;
+  padding: 30px !important;
+  text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  .long-card {
+    width: 90vw;
+  }
+}
+
+.long-card h2 {
+  color: #ff4571;
+  text-transform: uppercase;
+}
+
+.dontTouch {
+  cursor: not-allowed;
+}
+
+.footer {
+  color: #ffffff;
 }
